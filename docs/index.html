@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Same Task, Different Circuits – Project Page</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+
+    <style>
+        mark {
+            -webkit-animation: 3s highlight 1.5s 1 normal forwards;
+            animation: 3s highlight 1.5s 1 normal forwards;
+            background-color: none;
+            background: linear-gradient(90deg, #f7f5bc 50%, rgba(255, 255, 255, 0) 50%);
+            background-size: 200% 100%;
+            background-position: 100% 0;
+        }
+        
+        @-webkit-keyframes highlight {
+          to {
+            background-position: 0 0;
+          }
+        }
+
+        @keyframes highlight {
+          to {
+            background-position: 0 0;
+          }
+        }
+        
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+        }
+
+        header {
+            background-color: #d45c47;
+            color: #fff;
+            padding: 60px 0;
+            text-align: center;
+        }
+        
+        figure {
+          text-align: center; /* Centers the content inside the figure */
+          margin: 20px auto; /* Adds vertical space and centers the figure horizontally */
+        }
+        
+        figcaption {
+          padding-top: 10px;
+          color: #555;
+          font-style: italic; /* Styling for the caption */
+          font-size: smaller;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 50px; /* Adjusted for longer title */
+            padding-bottom: 30px;
+            padding-top: 20px;
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+
+        header h2 {
+            margin: 10px 0 0;
+            font-weight: 400;
+        }
+        
+        header address a {
+            font-size: 24px;
+        }
+        
+        header address {
+            color: #337ab7; /* Link color for authors */
+        }
+
+        header address .author-link { /* Class for author links */
+            color: #fff; /* White color for author names */
+            text-decoration: none;
+        }
+        header address .author-link:hover {
+            text-decoration: underline;
+        }
+
+        header address institute {
+            color: #000000;
+            font-size: 16px;
+        }
+        
+        header address sup {
+            color: #000000;
+        }
+
+        .container {
+            width: 70%; /* Increased width for potentially more content */
+            margin: 40px auto;
+        }
+        
+        section {
+            margin-bottom: 50px;
+        }
+
+        section h2.subtitle, .subtitle { /* Combined for consistency */
+            font-size: 28px;
+            border-left: 5px solid #c38521;
+            padding-left: 10px;
+            color: #333;
+            margin-top: 40px; /* Added margin-top for better separation */
+            margin-bottom: 20px; /* Added margin-bottom */
+        }
+
+        section p {
+            font-size: 18px;
+            line-height: 1.6;
+            margin-top: 10px;
+        }
+        
+        .figure-container {
+          display: grid;
+          grid-template-columns: 1fr 1fr; /* Creates two columns of equal width */
+          gap: 20px; /* Space between columns */
+        }
+        
+        .methodology {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            font-size: 18px;
+        }
+        
+        .methodology h3 {
+            font-size: 24px;
+            color: #444;
+            margin-top: 10px; /* Reduced margin top for h3 inside methodology */
+        }
+
+        .methodology ul {
+            margin-left: 0px; /* Reset margin for ul */
+            padding-left: 20px; /* Add padding for indentation */
+        }
+
+        .methodology ul li ol {
+            margin-bottom: 10px;
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 5px 0;
+        }
+
+        footer p {
+            margin: 0;
+            font-size: 16px;
+        }
+        .card {
+            position: relative;
+            display: -webkit-box;
+            display: -webkit-flex;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-orient: vertical;
+            -webkit-box-direction: normal;
+            -webkit-flex-direction: column;
+            -ms-flex-direction: column;
+            flex-direction: column;
+            background-color: #fff;
+            border: 1px solid rgba(0, 0, 0, .125);
+            border-radius: .25rem;
+        }
+        .card-header {
+            padding: .75rem 1.25rem;
+            margin-bottom: 0;
+            margin-top: 0;
+            background-color: #f7f7f9;
+            border-bottom: 1px solid rgba(0, 0, 0, .125);
+            }
+        .card-block {
+            -webkit-box-flex: 1;
+            -webkit-flex: 1 1 auto;
+            -ms-flex: 1 1 auto;
+            flex: 1 1 auto;
+            padding: 1.25rem;
+        }
+        .img-inline {
+          vertical-align: middle;
+          max-width: 100%;
+          height: auto;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Same Task, Different Circuits: <br>Disentangling Modality-Specific Mechanisms in VLMs</h1>
+    <address>
+      <nobr><a href="https://yaniv.nikankin.com/" target="_blank" class="author-link">Yaniv Nikankin</a><sup>1</sup>,</nobr>
+      <nobr><a href="https://x.com/dana_arad4" target="_blank" class="author-link">Dana Arad</a><sup>1</sup>,</nobr> 
+      <nobr><a href="https://yossigandelsman.github.io" target="_blank" class="author-link">Yossi Gandelsman</a><sup>2</sup>,</nobr> 
+      <nobr><a href="https://belinkov.com/" target="_blank" class="author-link">Yonatan Belinkov</a><sup>1</sup></nobr>
+     <br>
+      <nobr><sup>1</sup><institute>Technion - Israel Institute of Technology</institute></nobr>;
+      <nobr><sup>2</sup><institute>UC Berkeley</institute></nobr>
+    </address>
+    <a href="https://arxiv.org/abs/2506.09047" target="_blank" class="btn" style="color: #fff; background-color: #198754; border-color: #136e44;"><i class="ai ai-arxiv"></i> ArXiv</a>
+    <a href="./paper.pdf" target="_blank" class="btn" style="color: #fff; background-color: #dc3545; border-color: #b72d3a;"><i class="far fa-file-pdf"></i> PDF</a>
+    <a href="https://github.com/technion-cs-nlp/vlm-circuits-analysis" target="_blank" class="btn" style="color: #fff; background-color: #212529; border-color: #212529;"><i class="fab fa-github"></i> Code</a>
+</header>
+
+
+<div class="container">
+
+    <h2 class="subtitle">Abstract</h2>
+    <section>
+        <p>
+
+        <mark>Vision-Language models (VLMs) show impressive abilities to answer questions on visual inputs (e.g., counting objects in an image), yet demonstrate higher accuracies when performing an analogous task on text (e.g., counting words in a text).</mark>
+        We investigate this accuracy gap by identifying and comparing the circuits — the task-specific computational sub-graphs — in different modalities. 
+        <mark>We show that while circuits are largely disjoint between modalities, they implement relatively similar functionalities: the differences lie primarily in processing modality-specific data positions (an image or a text sequence).</mark>
+        Zooming in on the image data representations, we observe they become aligned with the higher-performing analogous textual representations only towards later layers, too late in processing to effectively influence subsequent positions.
+        To overcome this, <mark>we patch the representations of visual data tokens from later layers back into earlier layers.</mark>
+        In experiments with multiple tasks and models, <mark>this simple intervention closes a third of the performance gap between the modalities, on average.</mark>
+        Our analysis sheds light on the multi-modal performance gap in VLMs and suggests a training-free approach for reducing it. 
+        </p>
+    </section>
+
+    <h2 class="subtitle">Overview of our VLM Analysis</h2>
+    <section class="methodology">
+        <p>
+            Vision-Language Models (VLMs) often show a performance gap when handling analogous tasks presented in visual versus textual formats.  This work investigates the source of this gap by analyzing the internal circuits (task-specific computational sub-graphs) that VLMs utilize for these different modalities.
+        </p>
+        <figure>
+            <img src="img/main.png" style="width:100%; max-width:800px; display:block; margin:auto;">
+            <figcaption style="text-align: center;">
+                (a) We find circuits for analogous vision and language tasks and show they are structurally disjoint between modalities.
+                <br>
+                (b) Swapping sub-circuits across modalities reveals that query and generation components preserve performance when swapped between modalities, while swapping data components degrades performance.
+                <br>
+                (c) To address the performance gap, we apply back-patching: re-injecting textually-aligned visual data activations from later layers into earlier ones. 
+            </figcaption>
+        </figure>
+    </section>
+
+    <h2 class="subtitle">How do we align visual and textual processing?</h2>
+    <section class="methodology">
+        <p>
+            To study the difference between visual and textual processing, we create a dataset of five question-answering tasks.
+            <!-- <br> -->
+            Each task has pairs of aligned textual and visual prompt variants, ensuring direct comparability.
+            <br>
+            All prompts adhere to a fixed positional template, and each position in a textual prompt is aligned with the corresponding position in the analogous visual prompt.
+        </p>
+        <figure>
+            <img src="img/datasets.png" alt="Figure 2: Analogous Vision-Language Tasks" style="width:100%; max-width:800px; display:block; margin:auto;">
+            <figcaption style="text-align: center;">
+                Analogous Vision-Language Tasks. 
+                A task prompt is made up of a query (bottom row) asked either about an image (middle row) or an analogous text (top row).
+            </figcaption>
+        </figure>
+    </section>
+
+
+    <h2 class="subtitle">Where do visual and textual processing differ in VLMs?</h2>
+    <section class="methodology">
+        <p>
+            To find the differences (and similarities) between textual and visual processing in VLMs,
+            we find circuits that are faithful to the textual and visual variant of each task, and analyze their structural and functional intersections.
+        </p>
+        
+        <h3>Structural Intersection</h3>
+        <p>
+            We measure structural intersection by measuring the IoU of circuits found for each modality (for a given task).
+            This is measured separately per position group (data, query and generation).
+        </p>
+        <ul>
+            <li>Visual and textual circuits for the same task are mostly <b>structurally disjoint</b>, with an average of 18% components shared between modalities. </li>
+            <li>The structural overlap is low in data and query position groups, and moderate in the generation (last) position only.</li>
+        </ul>
+        <figure>
+            <img src="img/structural.png" style="width:100%; max-width:800px; display:block; margin:auto;">
+            <figcaption style="text-align: center;">
+                Normalized IoU scores, showing low circuit overlap in <span style="color: #3478bd;">data</span>,
+                <span style="color: #e5920e;">query</span>, and  <span style="color: #16a533;">generation</span> positions between textual and visual circuits. 
+            </figcaption>
+        </figure>
+
+        <h3>Functional Interchangeability</h3>
+        <p>
+            Structural difference is only half of the picture: different circuits can implement similar logic.
+            <br>
+            We test this by measuring cross-modal faithfulness, swapping sub-circuits between modalities and measuring the resulting faithfulness.
+        </p>
+        <ul>
+            <li>Query and Generation sub-circuits are functionally equivalent and interchangeable between modalities, implying different components perform similar functions.</li>
+            <li>Data sub-circuits are modality-specific; Swapping them significantly degrades performance, highlighting that differences in data processing are a key factor in the performance gap.</li>
+        </ul>
+        <figure>
+            <img src="img/functional.png" style="width:100%; max-width:800px; display:block; margin:auto;">
+            <figcaption style="text-align: center;">
+                Normalized IoU scores, showing low circuit overlap in <span style="color: #3478bd;">data</span>,
+                <span style="color: #e5920e;">query</span>, and  <span style="color: #16a533;">generation</span> positions between textual and visual circuits. 
+            </figcaption>
+        </figure>
+    </section>
+
+    <h2 class="subtitle">Using interpretability insights to bridge the visual-textual gap</h2>
+    <section class="methodology">
+        <p>
+            Zooming on the data positions, shown to be processed completely differently, we see that visual data token representations gradually align with their textual analogs as they progress through the VLM.
+            We hypothesize that this happens too late in the model, affecting visual prompt accuracy.
+        </p>
+        <figure>
+            <img src="img/similarities-l-to-vl-activations.png" style="width:100%; max-width:800px; display:block; margin:auto;">
+            <figcaption style="text-align: center;">
+                Similarity between visual data activations and analogous textual data activations increases deeper in the model.
+            </figcaption>
+        </figure>
+
+        <p>
+            To address this, we employ <strong>back-patching</strong>: re-injecting the more textually-aligned representations of visual data tokens from later layers into earlier layers.  
+            This makes these aligned representations available earlier in the visual processing pipeline.
+            <br><br>
+            This simple intervention leads to increased accuracy on visual prompts across multiple tasks and VLM models (closing a third of the performance gap between visual and textual prompts).
+        </p>
+        
+        </ul>
+        <figure>
+            <img src="img/bp_results_table.png" style="width:100%; max-width:800px; display:block; margin:auto;">
+            <figcaption style="text-align: center;">
+                Back-patching visual token embeddings increases accuracy across tasks. 
+            </figcaption>
+        </figure>
+    </section>
+
+
+    <h2 class="subtitle">How to cite</h2>
+
+    <div class="card">
+    <h3 class="card-header">bibtex</h3>
+    <div class="card-block">
+    <pre class="card-text clickselect">
+@article{nikankin2025sametask,
+  title={Same Task, Different Circuits: Disentangling Modality-Specific Mechanisms in VLMs},
+  author={Nikankin, Yaniv and Arad, Dana and Gandelsman, Yossi and Belinkov, Yonatan},
+  journal={Preprint},
+  note={Under review},
+  year={2025}
+}
+    </pre>
+    </div>
+    </div>
+    <p></p>
+
+
+<footer>
+    <p>Forked from a template by Hadas Orgad | Technion | 2024</p>
+</footer>
+
+</div> </body>
+</html>

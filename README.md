@@ -1,6 +1,6 @@
 # Same Task, Different Circuits: Disentangling Modality-Specific Mechanisms in VLMs
 
-This repository contains the code for the experiments of our VLM circuit overlap [paper](https://arxiv.org/TODO).
+This repository contains the code for the experiments of our VLM circuit overlap [paper](https://arxiv.org/abs/2506.09047) and the [project website](https://technion-cs-nlp.github.io/vlm-circuits-analysis).
 
 
 ## Repository structure

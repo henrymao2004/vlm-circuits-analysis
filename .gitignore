@@ -4,7 +4,6 @@ debug/
 *.pyc
 *.log
 *.pt
-*.png
 per_neuron_*
 data/mean_cache*
 mlp_input_*
