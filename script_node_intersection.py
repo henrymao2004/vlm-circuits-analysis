@@ -386,8 +386,6 @@ def analyze_circuit_intersections(model, args, pos_mapping):
         model,
         l_scores,
         vl_scores,
-        args.l_circuit_percentage,
-        args.vl_circuit_percentage,
         pos_mapping,
         args,
     )
