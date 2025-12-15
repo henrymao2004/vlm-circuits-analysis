@@ -22,7 +22,6 @@ from general_utils import (
 from analysis_utils import SUPPORTED_TASKS, load_model, load_dataset
 
 
-DISCOVERY_EVAL_SPLIT_PERCENT = 0.75
 METRICS = ["LD"]
 PERCENTAGES = sorted(
     torch.arange(0.0, 0.21, 0.01).tolist()  # High res in low amounts of nodes
